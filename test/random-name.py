@@ -1,7 +1,7 @@
 import requests
 import json
 
-responce = requests.get('http://localhost:7836/random-name')
+responce = requests.get('http://localhost:3000/random-name')
 
 s = responce.json()
 
