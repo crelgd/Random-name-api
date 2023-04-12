@@ -7,14 +7,17 @@ const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'static', 'index.html'));
+    console.log(`${Date.now()} | /`);
 });
 
 app.get('/ping', (req, res) => {
     res.send('Pong!');
+    console.log(`${Date.now()} | /ping`);
 });
 
-app.get('/random-name', (req, res) => {
+app.get('/random', (req, res) => {
     res.json(randomName());
+    console.log(`${Date.now()} | /random`);
 });
 
 app.listen(PORT, () => {
